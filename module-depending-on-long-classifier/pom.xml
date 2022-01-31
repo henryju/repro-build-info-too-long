@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>repro-build-info-too-long</artifactId>
+    <groupId>org.sonarsource</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>module-depending-on-long-classifier</artifactId>
+  
+  <name>module-dependeing-on-long-classifier</name>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>module-with-long-classifier</artifactId>
+      <version>${project.version}</version>
+      <classifier>listenablefuture-9999.0-empty-to-avoid-conflict-with-guava-very-long</classifier>
+    </dependency>
+  </dependencies>
+
+
+</project>
